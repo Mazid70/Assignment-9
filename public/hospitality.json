@@ -1,0 +1,92 @@
+[
+  {
+      "id": 1,
+      "segment_name": "Hotel",
+      "property_name": "Grand Luxe Hotel",
+      "description": "Experience unparalleled luxury and world-class service at the Grand Luxe Hotel. Located in the heart of the city, our hotel offers exquisite accommodations and exceptional amenities.",
+      "rating": 5,
+      "location": "Paris, France",
+      "facilities": ["Spa", "Fine dining restaurant", "Fitness center", "Rooftop bar"],
+      "image": "https://i.ibb.co/TW0J6tz/GRAND-LUXE-HOTEL-AND-RESORT-Tucson-Aussenansicht-1-787928.jpg",
+      "additional_info": {
+          "rooms": 200,
+          "suites": 50,
+          "conference_rooms": 5
+      }
+  },
+  {
+      "id": 2,
+      "segment_name": "Resort",
+      "property_name": "Tropical Paradise Resort",
+      "description": "Escape to our tropical paradise resort and indulge in luxury amidst lush greenery and pristine beaches. Whether you seek relaxation or adventure, our resort offers something for everyone.",
+      "rating": 4.5,
+      "location": "Bora Bora, French Polynesia",
+      "facilities": ["Infinity pool", "Private beach", "Water sports", "Tennis courts"],
+      "image": "https://i.ibb.co/6RQpt4G/tropical-paradise-hotel.jpg",
+      "additional_info": {
+          "rooms": 50,
+          "suites": 30,
+          "conference_rooms": 3
+      }
+  },
+  {
+      "id": 3,
+      "segment_name": "Vacation Rental",
+      "property_name": "Seaside Villa",
+      "description": "Escape to our charming seaside villa and enjoy breathtaking ocean views from your private terrace. Perfect for families or couples seeking a tranquil getaway.",
+      "rating": 4.8,
+      "location": "Santorini, Greece",
+      "facilities": ["Private pool", "Outdoor dining area", "Garden", "BBQ grill"],
+      "image": "https://i.ibb.co/Vmz8xJQ/images.jpg",
+      "additional_info": {
+          "rooms": 3,
+          "suites": 2,
+          "conference_rooms": 0
+      }
+  },
+  {
+      "id": 4,
+      "segment_name": "Guesthouse",
+      "property_name": "Cozy Cottage Guesthouse",
+      "description": "Experience warm hospitality and cozy accommodations at our charming guesthouse nestled in the countryside. Perfect for a peaceful retreat away from the hustle and bustle.",
+      "rating": 4.2,
+      "location": "Cotswolds, England",
+      "facilities": ["Garden", "Common lounge area", "Homemade breakfast", "Free WiFi"],
+      "image": "https://i.ibb.co/FXbgj6p/Getaway-House-Plan-59040-familyhomeplans-com.jpg",
+      "additional_info": {
+          "rooms": 6,
+          "suites": 0,
+          "conference_rooms": 0
+      }
+  },
+  {
+      "id": 5,
+      "segment_name": "Boutique Hotel",
+      "property_name": "Charming Haven Boutique Hotel",
+      "description": "Discover a haven of charm and sophistication at our boutique hotel. Nestled in a quaint neighborhood, our hotel offers personalized service and stylish accommodations.",
+      "rating": 4.7,
+      "location": "Florence, Italy",
+      "facilities": ["Rooftop terrace", "Wine bar", "Concierge service", "Library"],
+      "image": "https://i.ibb.co/v4ZjVvV/boutique-hotel.jpg",
+      "additional_info": {
+          "rooms": 30,
+          "suites": 10,
+          "conference_rooms": 1
+      }
+  },
+  {
+      "id": 6,
+      "segment_name": "Bed and Breakfast",
+      "property_name": "Sunrise Inn Bed and Breakfast",
+      "description": "Experience the warmth of a home away from home at Sunrise Inn. Our charming bed and breakfast offers cozy rooms and hearty breakfasts to start your day.",
+      "rating": 4.4,
+      "location": "Napa Valley, California, USA",
+      "facilities": ["Garden", "Wine tasting room", "Outdoor fireplace", "Complimentary breakfast"],
+      "image": "https://i.ibb.co/7vN1n4Z/bed-and-breakfast.jpg",
+      "additional_info": {
+          "rooms": 8,
+          "suites": 0,
+          "conference_rooms": 0
+      }
+  }
+]
