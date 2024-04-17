@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/read"
+              to="/signup"
               style={({ isActive }) => {
                 return {
                   fontWeight: isActive ? "bold" : "bold",

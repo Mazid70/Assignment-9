@@ -5,7 +5,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './Components/Home.jsx'
 import SignIn from './Components/SignIn.jsx'
-// import SignUp from './Components/SignUp.jsx'
+import SignUp from './Components/SignUp.jsx'
 const router=createBrowserRouter([{
   path:"/",
   element:<App></App>,
@@ -28,7 +28,7 @@ const router=createBrowserRouter([{
     },
     {
       path:"/signup",
-      // element:<SignUp></SignUp> ,
+      element:<SignUp></SignUp> ,
     }
   ]
 
