@@ -11,7 +11,7 @@ const SignUp = () => {
   const passwordToggle = () => {
     setVisible(!visible);
   };
-  const { createUser } = useContext(AuthContext);
+  const { createUser,googleSingUp } = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -98,7 +98,7 @@ const SignUp = () => {
             <div className="h-[1px] bg-white w-full"></div>
           </div>
         </form>
-        <div className=" mt-5 flex text-base font-bold items-center bg-white h-12 text-[#6c6c6f] rounded-full">
+        <div onClick={googleSingUp} className= " mt-5 flex text-base font-bold items-center bg-white h-12 text-[#6c6c6f] rounded-full">
           {" "}
           <FcGoogle className="text-2xl ml-6 mr-16" /> Sign up with Google{" "}
         </div>

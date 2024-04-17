@@ -9,6 +9,7 @@ import SignUp from './Components/SignUp.jsx'
 import AuthProvider from './Provider/AuthProvider.jsx'
 import PrivateRoute from './Components/PrivateRoute.jsx'
 import Details from './Components/Details.jsx'
+import AboutUs from './Components/AboutUs.jsx'
 const router=createBrowserRouter([{
   path:"/",
   element:<App></App>,
@@ -23,7 +24,7 @@ const router=createBrowserRouter([{
     },
     {
       path:"/about",
-      element:<Home></Home>
+      element:<AboutUs></AboutUs>
     },
     {
       path:"/signin",
@@ -36,7 +37,7 @@ const router=createBrowserRouter([{
     {
       loader: () => fetch("../hospitality.json"),
       path: "/estate/:id",
-      element: <Details></Details>
+      element: <PrivateRoute><Details></Details></PrivateRoute> 
     },
   ]
 

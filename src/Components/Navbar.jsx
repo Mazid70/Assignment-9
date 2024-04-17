@@ -3,19 +3,17 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Drawer, Sidebar, TextInput } from "flowbite-react";
 import { useState } from "react";
-import {
-  
-  HiLogin,
-  HiPencil,
-  HiSearch,
- 
-} from "react-icons/hi";
+import { HiLogin, HiPencil, HiSearch } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+const handleSignOut=()=>{
+  logOut()
+  .then()
+  .catch()
+}
   const handleClose = () => setIsOpen(false);
-  const { user } = useContext(AuthContext);
+  const { user,logOut } = useContext(AuthContext);
   const Link = (
     <>
       <li>
@@ -63,23 +61,8 @@ const Navbar = () => {
           About Us
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/signup"
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "bold" : "bold",
-              color: isActive ? "#FCB100" : "#fff",
-              background: isActive ? "transparent" : "",
-              border: isActive ? "1px solid #FCB100" : "",
-            };
-          }}
-        >
-          Sign Up
-        </NavLink>
-      </li>
-
-      <li>
+     
+{!user? <li>
         <NavLink
           to="/signin"
           style={({ isActive }) => {
@@ -93,7 +76,8 @@ const Navbar = () => {
         >
           Sign In
         </NavLink>
-      </li>
+      </li>:""}
+     
     </>
   );
 
@@ -134,21 +118,30 @@ const Navbar = () => {
         </div>
         <div className="navbar-end space-x-4">
           <div
-            className="h-14 w-14 cursor-pointer "
+            className="h-14 w-14 cursor-pointer"
             onClick={() => setIsOpen(true)}
           >
-            <img
-              className="h-full w-full rounded-full"
-              src="https://static.vecteezy.com/system/resources/previews/005/005/788/original/user-icon-in-trendy-flat-style-isolated-on-grey-background-user-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-free-vector.jpg"
-              alt=""
-            />
+            <div
+              className="tooltip tooltip-right "
+              data-tip={user?user.displayName:""}
+            >
+              <img
+                className="h-full w-full rounded-full bg-white"
+                src={
+                  user
+                    ? user.photoURL
+                    : "https://static.vecteezy.com/system/resources/previews/019/879/198/non_2x/user-icon-on-transparent-background-free-png.png"
+                }
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
       {/* drawer  */}
-      <Drawer open={isOpen} onClose={handleClose} position="right" >
+      <Drawer open={isOpen} onClose={handleClose} position="right">
         <Drawer.Header title="User Profile" titleIcon={() => <></>} />
-        <Drawer.Items >
+        <Drawer.Items>
           <Sidebar
             aria-label="Sidebar with multi-level dropdown example"
             className="[&>div]:bg-transparent [&>div]:p-0"
@@ -171,20 +164,35 @@ const Navbar = () => {
                       onClick={() => setIsOpen(true)}
                     >
                       <img
-                        className="h-full w-full rounded-full"
-                        src="https://static.vecteezy.com/system/resources/previews/005/005/788/original/user-icon-in-trendy-flat-style-isolated-on-grey-background-user-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-free-vector.jpg"
+                        className="h-full w-full rounded-full border-2 border-black"
+                        src={
+                          user
+                            ? user.photoURL
+                            : "https://static.vecteezy.com/system/resources/previews/019/879/198/non_2x/user-icon-on-transparent-background-free-png.png"
+                        }
                         alt=""
                       />
                     </div>
-                    <h1 className="font-semibold">Name</h1>
-                    <h1 className="font-medium">Email</h1>
+                    <h1 className="font-semibold">
+                      {user ? user.displayName : "Name:null"}
+                    </h1>
+                    <h1 className="font-medium">
+                      {user ? user.email : "Email:null"}
+                    </h1>
                     <div className="self-start">
-                    <Sidebar.Item href="/authentication/sign-in" icon={HiLogin}>
-                      Sign Out
-                    </Sidebar.Item>
-                    <Sidebar.Item href="/authentication/sign-up" icon={HiPencil}>
-                      Update Profile
-                    </Sidebar.Item>
+                      <Sidebar.Item
+                        href="/authentication/sign-in"
+                        icon={HiLogin}
+                        onClick={handleSignOut}
+                      >
+                        Sign Out
+                      </Sidebar.Item>
+                      <Sidebar.Item
+                        href="/authentication/sign-up"
+                        icon={HiPencil}
+                      >
+                        Update Profile
+                      </Sidebar.Item>
                     </div>
                   </Sidebar.ItemGroup>
                 </Sidebar.Items>
