@@ -3,7 +3,7 @@ import AroundTheWorld from "./AroundTheWorld";
 import Banner from "./Banner";
 import { useEffect } from "react";
 import EstateSection from "./EstateSection";
-// import GrandTrip from "./GrandTrip";
+import GrandTrip from "./GrandTrip";
 
 const Home = () => {
   const [hospitality, setHospitality] = useState([]);
@@ -14,8 +14,9 @@ const Home = () => {
   }, []);
   console.log(hospitality);
   return (
-    <main className=" container mx-auto">
-      <Banner></Banner>
+    <main >
+      <Banner ></Banner>
+      <div className=" container mx-auto">
       <AroundTheWorld></AroundTheWorld>
       <h1 className="font-bold text-5xl  text-center my-10"> Estate</h1>
       <section className="grid grid-cols-3 gap-10">
@@ -24,7 +25,9 @@ const Home = () => {
           <EstateSection key={hospital.id} hospital={hospital}></EstateSection>
         ))}
       </section>
-      {/* <GrandTrip></GrandTrip> */}
+      <GrandTrip></GrandTrip>
+      </div>
+     
     </main>
   );
 };

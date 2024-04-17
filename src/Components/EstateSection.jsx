@@ -1,6 +1,7 @@
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Link } from 'react-router-dom';
 // ..
 AOS.init();
 
@@ -18,7 +19,7 @@ const EstateSection = ({hospital}) => {
       suites,
       conference_rooms}=hospital
     return (
-      <div data-aos="fade-up" data-aos-delay="1000">
+      <div data-aos="fade-up" data-aos-delay="300">
     <article className="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl flex justify-center">
       <div>
         <div className="relative flex items-end overflow-hidden rounded-xl">
@@ -42,14 +43,15 @@ const EstateSection = ({hospital}) => {
             </p>
 
             <div className="group inline-flex rounded-xl ">
-            <a
-              href="#_"
-              className="relative inline-flex items-center justify-center px-5 py-3 overflow-hidden font-medium tracking-tighter text-white bg-sky-300 rounded-lg group"
-            >
-              <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-500 rounded-full group-hover:w-56 group-hover:h-56"></span>
-              <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
-              <span className="relative">SeeDetails</span>
-            </a>
+            
+            <Link to={`/estate/${id}`}><a
+        
+        className="relative inline-flex items-center justify-center px-5 py-3 overflow-hidden font-medium tracking-tighter text-white bg-sky-300 rounded-lg group"
+      >
+        <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-500 rounded-full group-hover:w-56 group-hover:h-56"></span>
+        <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+       <span className="relative">SeeDetails</span>
+      </a></Link>
             </div>
           </div>
         </div>
