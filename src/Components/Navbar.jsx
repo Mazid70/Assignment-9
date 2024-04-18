@@ -174,25 +174,35 @@ const handleSignOut=()=>{
                       />
                     </div>
                     <h1 className="font-semibold">
-                      {user ? user.displayName : "Name:null"}
+                      {user ? user.displayName : ""}
                     </h1>
                     <h1 className="font-medium">
-                      {user ? user.email : "Email:null"}
+                      {user ? user.email : ""}
                     </h1>
+                    <h1 className="font-semibold">
+                      {user ? user.phoneNumber : ""}
+                    </h1>
+                    
                     <div className="self-start">
-                      <Sidebar.Item
-                        href="/authentication/sign-in"
+                      {user?<Sidebar.Item
                         icon={HiLogin}
                         onClick={handleSignOut}
                       >
                         Sign Out
-                      </Sidebar.Item>
+                      </Sidebar.Item>:<NavLink to='/signin'><Sidebar.Item
+                        icon={HiLogin}
+                        
+                      >
+                        Sign In
+                      </Sidebar.Item></NavLink>}
+                      <NavLink to="/signup">
                       <Sidebar.Item
-                        href="/authentication/sign-up"
                         icon={HiPencil}
                       >
                         Update Profile
                       </Sidebar.Item>
+                      </NavLink>
+                      
                     </div>
                   </Sidebar.ItemGroup>
                 </Sidebar.Items>

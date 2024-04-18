@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "title": "Top 10 Luxurious Resorts Around the World",
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/106338924.jpg?k=c68c41eb5b84df1bf00b1c7e2da047b8b7422ab7a9d141b1e502d5904a07716a&o=&hp=1",
+      "content": "Indulge in the epitome of luxury with our list of the top 10 most luxurious resorts around the world. From private villas in the Maldives to cliffside retreats in Santorini, these resorts offer unparalleled opulence and breathtaking views.",
+      "date": "2024-04-15",
+      "author": "John Doe",
+      "authorImage": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713398400&semt=sph",
+      "tags": ["Luxury", "Travel", "Resorts", "Top 10"]
+    },
+    {
+      "id": 2,
+      "title": "Hidden Gems: Charming Guesthouses Off the Beaten Path",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJe-tKWfcSyHHpAlIbSgd0RZBuUQWecuyEtvJ9Xwdeuw&s",
+      "content": "Discover hidden gems and experience local hospitality with our guide to charming guesthouses off the beaten path. Escape the crowds and immerse yourself in the culture and charm of quaint guesthouses tucked away in picturesque villages and countryside settings.",
+      "date": "2024-04-10",
+      "author": "Jane Smith",
+      "authorImage": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713398400&semt=sph",
+      "tags": ["Travel", "Guesthouses", "Hidden Gems"]
+    },
+    {
+      "id": 3,
+      "title": "Unforgettable Lodge Retreats for Nature Lovers",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPwtBJ4E4ydOi-I0mnWre3fwI7bKL9l9_eJ5BgNP_Lhw&s",
+      "content": "Embark on an unforgettable adventure with our selection of lodge retreats for nature lovers. From remote wilderness lodges surrounded by pristine forests to cozy mountain retreats with panoramic views, these lodges offer the perfect blend of comfort and natural beauty.",
+      "date": "2024-04-05",
+      "author": "David Johnson",
+      "authorImage": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713398400&semt=sph",
+      "tags": ["Nature", "Lodges", "Adventure"]
+    },
+    {
+      "id": 4,
+      "title": "Ultimate Beachfront Escapes: Resorts with Stunning Ocean Views",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-UfJrV00PndJCxSjvDNLJK5jIszPyQavwvcmobtYIKw&s",
+      "content": "Experience the ultimate beachfront escape with our curated list of resorts boasting stunning ocean views. Relax on white sandy beaches, enjoy water sports activities, and witness breathtaking sunsets from your private balcony at these idyllic beachfront resorts.",
+      "date": "2024-03-28",
+      "author": "Emily Brown",
+      "authorImage": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713398400&semt=sph",
+      "tags": ["Beach", "Resorts", "Ocean Views"]
+    },
+    {
+      "id": 5,
+      "title": "Cozy Cabin Getaways: Rustic Retreats for Relaxation",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPtgxOZbnUHpD0V178xjPPgoViwY_oMAEX8ruqJyYOVA&s",
+      "content": "Escape to the tranquility of nature with our selection of cozy cabin getaways. Whether nestled in the mountains, nestled in the woods, or overlooking a serene lake, these rustic retreats offer the perfect setting for relaxation and rejuvenation.",
+      "date": "2024-03-20",
+      "author": "Michael Wilson",
+      "authorImage": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713398400&semt=sph",
+      "tags": ["Nature", "Cabins", "Relaxation"]
+    },
+    {
+      "id": 6,
+      "title": "Safari Adventures: Unique Lodges in the Heart of Wildlife",
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/455268627.jpg?k=810a8bb47c91df412b0a1878964a6e90f4137bec8a4a5f1c1070e471718bcf05&o=&hp=1",
+      "content": "Embark on a safari adventure and stay in unique lodges located in the heart of wildlife reserves. Witness majestic animals in their natural habitat, enjoy guided safari tours, and experience the thrill of a lifetime at these exclusive safari lodges.",
+      "date": "2024-03-15",
+      "author": "Jessica Lee",
+      "authorImage": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713398400&semt=sph",
+      "tags": ["Safari", "Wildlife", "Adventure"]
+    }
+  ]
+  

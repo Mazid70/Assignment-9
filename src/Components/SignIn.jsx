@@ -67,7 +67,7 @@ const SignIn = () => {
           <div className="flex justify-between">
             {" "}
             <div>
-              <input type="checkbox" /> <span> Remember Me</span>{" "}
+              <input type="checkbox" required/> <span> Remember Me</span>{" "}
             </div>
             <span>
               <a href="#">Forget Password?</a>

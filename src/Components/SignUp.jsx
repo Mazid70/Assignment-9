@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaLock, FaUser, FaFacebook, FaPhoneAlt } from "react-icons/fa";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
@@ -11,21 +11,30 @@ const SignUp = () => {
   const passwordToggle = () => {
     setVisible(!visible);
   };
-  const { createUser,googleSingUp } = useContext(AuthContext);
+  const navigate=useNavigate();
+  const location=useLocation();
+  const onform=location?.state || "/"
+  const { createUser,googleSingUp ,setUpdateProfile} = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const email = form.get("email");
     const phone = form.get("phone");
+    const image = form.get("image");
     const password = form.get("password");
     createUser(email, password)
       .then((result) => {
+        setUpdateProfile(name,image,phone)
         console.log(result.user);
+        if(result.user){
+          navigate(onform)
+        }
       })
       .catch((error) => {
         console.error(error);
       });
+      
   };
   return (
     <section className=" -mb-10 flex items-center justify-center h-[100vh] bg-[url(assets/three.jpg)] bg-no-repeat bg-cover">
@@ -49,6 +58,16 @@ const SignUp = () => {
               type="email"
               placeholder="Enter your Email"
               name="email"
+              required
+            />
+          </div>
+          <div className="flex items-center  border w-full h-12 rounded-full relative">
+            <MdEmail className="absolute left-3" />
+            <input
+              className="w-full h-full bg-transparent rounded-full pl-10 placeholder:text-white "
+              type="link"
+              placeholder="Enter your Image URL"
+              name="image"
               required
             />
           </div>

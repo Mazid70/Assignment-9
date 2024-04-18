@@ -10,6 +10,7 @@ import AuthProvider from './Provider/AuthProvider.jsx'
 import PrivateRoute from './Components/PrivateRoute.jsx'
 import Details from './Components/Details.jsx'
 import AboutUs from './Components/AboutUs.jsx'
+import Blogs from './Components/Blogs.jsx'
 const router=createBrowserRouter([{
   path:"/",
   element:<App></App>,
@@ -20,7 +21,7 @@ const router=createBrowserRouter([{
     },
     {
       path:"/blogs",
-      element:<PrivateRoute><Home></Home></PrivateRoute>
+      element:<PrivateRoute><Blogs></Blogs></PrivateRoute>
     },
     {
       path:"/about",
