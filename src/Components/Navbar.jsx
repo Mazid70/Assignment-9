@@ -195,13 +195,14 @@ const handleSignOut=()=>{
                       >
                         Sign In
                       </Sidebar.Item></NavLink>}
-                      <NavLink to="/signup">
+                      {user?<NavLink to="/update">
                       <Sidebar.Item
                         icon={HiPencil}
                       >
                         Update Profile
                       </Sidebar.Item>
                       </NavLink>
+                      :""}
                       
                     </div>
                   </Sidebar.ItemGroup>

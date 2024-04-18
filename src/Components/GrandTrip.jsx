@@ -1,6 +1,7 @@
 import imgone from "../assets/logo1.webp";
 import imgtwo from "../assets/logo2.png";
 import imgthree from "../assets/logo3.png";
+
 import CountUp from "react-countup";
 const GrandTrip = () => {
   return (
@@ -49,6 +50,8 @@ const GrandTrip = () => {
             </h1>
             <p className="font-semibold">Satisfied Clients</p>
           </div>
+
+          
         </div>
       </div>
     </section>

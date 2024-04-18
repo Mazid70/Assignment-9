@@ -11,6 +11,7 @@ import PrivateRoute from './Components/PrivateRoute.jsx'
 import Details from './Components/Details.jsx'
 import AboutUs from './Components/AboutUs.jsx'
 import Blogs from './Components/Blogs.jsx'
+import UpdatePro from './Components/UpdatePro.jsx'
 const router=createBrowserRouter([{
   path:"/",
   element:<App></App>,
@@ -34,6 +35,10 @@ const router=createBrowserRouter([{
     {
       path:"/signup",
       element:<SignUp></SignUp> ,
+    },
+    {
+      path:"/update",
+      element:<UpdatePro></UpdatePro> ,
     },
     {
       loader: () => fetch("../hospitality.json"),

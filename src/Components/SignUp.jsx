@@ -1,43 +1,48 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
-import { FaLock, FaUser, FaFacebook, FaPhoneAlt } from "react-icons/fa";
+import { FaLock, FaUser, FaPhoneAlt } from "react-icons/fa";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useContext, useState } from "react";
-import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const SignUp = () => {
   const [visible, setVisible] = useState(false);
   const passwordToggle = () => {
     setVisible(!visible);
   };
-  const navigate=useNavigate();
-  const location=useLocation();
-  const onform=location?.state || "/"
-  const { createUser,googleSingUp ,setUpdateProfile} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const onform = "/";
+  const { createUser, setUpdateProfile } = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
+
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const email = form.get("email");
     const phone = form.get("phone");
     const image = form.get("image");
     const password = form.get("password");
+
     createUser(email, password)
       .then((result) => {
-        setUpdateProfile(name,image,phone)
+        setUpdateProfile(name, image, phone);
         console.log(result.user);
-        if(result.user){
-          navigate(onform)
+
+        if (result.user) {
+          toast.success("Successfully Sign Up");
+          setTimeout(() => {
+            navigate(onform);
+          }, 2000);
         }
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        toast.error("Sign Up Failed");
       });
-      
   };
   return (
     <section className=" -mb-10 flex items-center justify-center h-[100vh] bg-[url(assets/three.jpg)] bg-no-repeat bg-cover">
+      <ToastContainer />
       <div className="backdrop-blur-xl w-[420px] px-[30px] py-[40px] shadow-xl border rounded-xl text-white ">
         <form onSubmit={handleSignUp} className="space-y-5">
           <h1 className="text-4xl font-bold text-center">Sign Up</h1>
@@ -89,6 +94,8 @@ const SignUp = () => {
               placeholder="Create a Password"
               name="password"
               required
+              pattern="(?=.*\d)(?=.*[!@#$%^&*])(?=.*[A-Z])[\w!@#$%^&*]+"
+              title="Password must contain at least one uppercase letter, one number, and one special character"
             />
             {visible ? (
               <BsFillEyeFill
@@ -110,22 +117,8 @@ const SignUp = () => {
               value="Sign Up"
             />
           </div>
-          <div className="flex items-center gap-2">
-            {" "}
-            <div className="h-[1px] bg-white w-full"></div>
-            <p>Or</p>
-            <div className="h-[1px] bg-white w-full"></div>
-          </div>
         </form>
-        <div onClick={googleSingUp} className= " mt-5 flex text-base font-bold items-center bg-white h-12 text-[#6c6c6f] rounded-full">
-          {" "}
-          <FcGoogle className="text-2xl ml-6 mr-16" /> Sign up with Google{" "}
-        </div>
-        <div className="mt-5 flex text-base font-bold items-center bg-white h-12 text-[#6c6c6f] rounded-full">
-          {" "}
-          <FaFacebook className=" text-blue-600 text-2xl ml-6 mr-16" /> Sign up
-          with Facebook{" "}
-        </div>
+
         <h3 className="mt-5 text-center">
           Already have an account?{" "}
           <Link className="font-semibold" to="/signin">

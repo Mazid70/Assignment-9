@@ -21,8 +21,8 @@ const Blogs = () => {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
-    <div className="container mx-auto py-12">
-      <h1 className="text-3xl font-bold text-center mb-8">Hospitality Blog</h1>
+    <div className="container mx-auto py-12 mt-10">
+      <h1 className="text-3xl font-bold text-center mb-8">Recent Blog </h1>
       {/* Blogs */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {currentBlogs.map(blog => (
