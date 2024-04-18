@@ -27,7 +27,7 @@ const UpdatePro = () => {
     <section className=" -mb-10 flex items-center justify-center h-[100vh] bg-[url(assets/three.jpg)] bg-no-repeat bg-cover">
       <Helmet><title>Update Profile</title></Helmet>
       <ToastContainer></ToastContainer>
-      <div className="backdrop-blur-xl w-[420px] px-[30px] py-[40px] shadow-xl border rounded-xl text-white ">
+      <div className="backdrop-blur lg:backdrop-blur-xl w-[420px] px-[30px] py-[40px] shadow-xl border rounded-xl text-white ">
         <form onSubmit={updateProfile} className="space-y-5">
           <h1 className="text-4xl font-bold text-center">Update Profile</h1>
           <div className="flex items-center  border w-full h-12 rounded-full relative">

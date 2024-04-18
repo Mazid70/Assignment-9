@@ -2,18 +2,12 @@ import one from "../assets/one.jpeg";
 import two from "../assets/two.jpg";
 import three from "../assets/three.jpg";
 
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./style.css";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
 const Banner = () => {
   return (
     <section className="mt-[75px]">

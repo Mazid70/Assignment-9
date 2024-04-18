@@ -5,13 +5,13 @@ import imgthree from "../assets/logo3.png";
 import CountUp from "react-countup";
 const GrandTrip = () => {
   return (
-    <section className="flex mt-14">
+    <section className="flex flex-col lg:flex-row mt-14">
       <div
-        className="bg-[url(assets/grand.webp)] px-1/2 py-60 bg-cover bg-no-repeat flex-1 "
+        className="bg-[url(assets/grand.webp)] lg:px-1/2  lg:py-60 bg-cover bg-no-repeat flex-1 "
         data-aos="fade-right"
-        data-aos-duration="1000"
+        data-aos-delay="1400"
       ></div>
-      <div className="bg-[#00374D] text-white flex-1 flex flex-col justify-center text-start pl-10 gap-4"data-aos="fade-left" data-aos-delay="1000">
+      <div className="p-5 bg-[#00374D] text-white flex-1 flex flex-col justify-center text-start pl-10 gap-4"data-aos="fade-left" data-aos-delay="1600">
         <h1 className="text-[#FCA532] font-semibold text-xl satisfy">
           Enjoy a Grand Trip{" "}
         </h1>
@@ -28,7 +28,7 @@ const GrandTrip = () => {
           </u>{" "}
           More
         </h1>
-        <div className="flex text-black gap-5">
+        <div className="flex flex-col lg:flex-row text-black gap-5">
           <div className="bg-white flex flex-col items-center justify-center rounded-xl px-7  py-5 space-y-2">
             <img src={imgone} alt="" />
             <h1 className=" font-bold text-3xl">
