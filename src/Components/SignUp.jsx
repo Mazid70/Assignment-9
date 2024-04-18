@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
 const SignUp = () => {
   const [visible, setVisible] = useState(false);
   const passwordToggle = () => {
@@ -43,6 +44,7 @@ const SignUp = () => {
   return (
     <section className=" -mb-10 flex items-center justify-center h-[100vh] bg-[url(assets/three.jpg)] bg-no-repeat bg-cover">
       <ToastContainer />
+      <Helmet><title>Sign up</title></Helmet>
       <div className="backdrop-blur-xl w-[420px] px-[30px] py-[40px] shadow-xl border rounded-xl text-white ">
         <form onSubmit={handleSignUp} className="space-y-5">
           <h1 className="text-4xl font-bold text-center">Sign Up</h1>

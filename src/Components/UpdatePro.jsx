@@ -3,9 +3,11 @@ import { MdEmail } from "react-icons/md";
 import { FaUser,  FaPhoneAlt } from "react-icons/fa";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
-
+import { Helmet } from "react-helmet";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const UpdatePro = () => {
-  const { setUpdateProfile,user } = useContext(AuthContext);
+  const { setUpdateProfile } = useContext(AuthContext);
   const navigate = useNavigate();
   const onform = "/";
   const updateProfile = (e) => {
@@ -15,12 +17,16 @@ const UpdatePro = () => {
     const phone = form.get("phone");
     const image = form.get("image");
     setUpdateProfile(name, image, phone)
-    user.reload()
-    navigate(onform)
+    toast.success("Update Successfully");
+    setTimeout(() => {
+      navigate(onform);
+    }, 2000);
   };
 
   return (
     <section className=" -mb-10 flex items-center justify-center h-[100vh] bg-[url(assets/three.jpg)] bg-no-repeat bg-cover">
+      <Helmet><title>Update Profile</title></Helmet>
+      <ToastContainer></ToastContainer>
       <div className="backdrop-blur-xl w-[420px] px-[30px] py-[40px] shadow-xl border rounded-xl text-white ">
         <form onSubmit={updateProfile} className="space-y-5">
           <h1 className="text-4xl font-bold text-center">Update Profile</h1>

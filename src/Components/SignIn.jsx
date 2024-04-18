@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 const SignIn = () => {
   const{signIn,googleSingUp,facebookSingUp}=useContext(AuthContext)
   const [visible, setVisible] = useState(false);
@@ -68,6 +69,7 @@ const SignIn = () => {
   return (
     <section className="-mb-10 flex items-center justify-center h-[100vh] bg-[url(assets/three.jpg)] bg-no-repeat bg-cover">
       <ToastContainer />
+      <Helmet><title>Sign In</title></Helmet>
       <div className="backdrop-blur-xl w-[420px] px-[30px] py-[40px] shadow-xl border rounded-xl text-white ">
         <form onSubmit={handleSignIn} className="space-y-5">
           <h1 className="text-4xl font-bold text-center">Sign In</h1>

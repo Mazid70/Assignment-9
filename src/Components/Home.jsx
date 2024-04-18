@@ -7,6 +7,7 @@ import GrandTrip from "./GrandTrip";
 import Discount from "./Discount";
 
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -20,6 +21,9 @@ const Home = () => {
   console.log(hospitality);
   return (
     <main >
+      <Helmet>
+      <title>Home</title>
+      </Helmet>
       
       <Banner ></Banner>
       <div className=" container mx-auto">

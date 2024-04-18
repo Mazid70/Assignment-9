@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -18,7 +19,7 @@ const Details = () => {
     return (
         <div style={{ backgroundImage: `url(${image})`}} className="  flex justify-center items-center h-[100vh] bg-no-repeat bg-cover -mb-10">
            <div key={id} className="border shadow-xl flex itr flex-col lg:flex-row lg:gap-12 lg:mt-10 w-4/5 justify-center items-center backdrop-blur-xl text-white ">
-     
+     <Helmet><title>Details|{id}</title></Helmet>
       <div className=" lg:w-[570px] h-[500px] lg:h-[500px] bg-[#1313130D] flex justify-center items-center rounded-xl">
         <img src={image} alt="" className="w-[70%] h-[70%]" />
       </div>
