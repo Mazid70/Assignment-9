@@ -13,9 +13,11 @@ import AboutUs from "./Components/AboutUs.jsx";
 import Blogs from "./Components/Blogs.jsx";
 import UpdatePro from "./Components/UpdatePro.jsx";
 import { Helmet } from "react-helmet";
+import Error from "./Components/Error.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<Error></Error>,
     element: <App></App>,
     children: [
       {
